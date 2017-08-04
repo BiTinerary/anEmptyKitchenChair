@@ -21,7 +21,7 @@ def search(query):
 
         response.append(service.cse().list(
             q=query, #Search words
-            cx='001132580745589424302:jbscnf14_dw',  #CSE Key
+            cx='',  #CSE Key
             lr='lang_en', #Search language
             start=startIndex
         ).execute())
