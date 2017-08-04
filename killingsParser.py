@@ -1,5 +1,5 @@
 from googleapiclient.discovery import build
-import json, os
+import json, time, os
 
 def getPoliceShootings():
 	with open('fatal-police-shootings-data.json', 'r') as policeKillings:
@@ -56,27 +56,49 @@ def googleSearch(query):
 
 		startIndex = response[nPage].get("queries").get("nextPage")[0].get("startIndex")
 
+		links = []
+		titles = []
+
 		for x in xrange(3):
 			try:
-				with open('linkToDeath.txt', 'a+') as article:
-					articleTitle = response[0]['items'][x]['title']
-					directLink = response[0]['items'][x]['link']
-					article.write(articleTitle)
-					article.write(directLink)
-					article.write('\n')
+				articleTitle = response[0]['items'][x]['title']
+				directLink = response[0]['items'][x]['link']
+				
+				links.append(directLink)
+				titles.append(articleTitle)
 
-				print response[0]['items'][x]['htmlTitle']
-				print response[0]['items'][x]['link']#[1]['link']
-			except:
-				pass
+			except Exception as e:
+				print e
+				break
+
+		return links, titles
 
 def Graveyard(folderName):
 	graveyard = getPoliceShootings()
 	createFolder(folderName)
 	
 	for person in graveyard:
-		with open('%s/%s.txt' % (folderName, person["name"].replace('"', '')), 'w+') as citizen:
-			citizen.write('%s\n' % person["name"])
+		name = person["name"]
+
+		try:
+			links, titles = googleSearch(name + "Police shooting")
+			for x in range(3):
+				person["link%s" % x] = links[x]
+		except Exception as e:
+			print 'woops'
+			print e
+			pass
+
+		with open('OriginalJsonGraveyardWithLinks.json', 'a+') as outJson:
+			json.dump(graveyard, outJson)
+
+		print 'sleeping'
+		time.sleep(5)
+
+		#with open('%s/%s.txt' % (folderName, name.replace('"', '')), 'w+') as citizen:
+		#	citizen.write('%s\n' % name)
+
+
 
 killings = getPoliceShootings()
 Graveyard("Graveyard")
