@@ -89,7 +89,7 @@ def Graveyard(folderName):
 			print e
 			pass
 
-		with open('OriginalJsonGraveyardWithLinks.json', 'a+') as outJson:
+		with open('GraveyardWithLinks.json', 'a+') as outJson:
 			json.dump(graveyard, outJson)
 
 		print 'sleeping'
