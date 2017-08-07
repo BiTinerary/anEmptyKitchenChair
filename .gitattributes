@@ -16,6 +16,6 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
-*.html linguist-vendored
-*.css linguist-vendored
+*.html linguist-vendored=False
+*.css linguist-vendored=False
 *.nsh linguist-vendored
