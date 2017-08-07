@@ -18,4 +18,3 @@
 
 *.html linguist-vendored=False
 *.css linguist-vendored=False
-*.nsh linguist-vendored
