@@ -12,4 +12,3 @@ https://www.youtube.com/watch?v=3kaUvGSLMew
 Victim, criminal, servant or otherwise. This is in dedication of everyone **affected** by the loss of every life represented by a headstone above.
 
 #### Next Update by 8.17.17
-
