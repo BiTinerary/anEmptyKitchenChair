@@ -51,7 +51,7 @@ def honorTheDead(person):
 
 def getGoogleSearchService(): # Prepping Google Custom Search API
 	service = build("customsearch", "v1",
-			developerKey="AIzaSyCH0Ogx_ccICZMyZkwpScZYyHXOkOuZIQY")
+			developerKey="")
 	return service
 
 def googleSearch(query): # Conduct google search of input parameter.
