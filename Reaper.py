@@ -2,6 +2,7 @@ from googleapiclient.discovery import build
 import json, time, os
 
 cemetery = {}
+ghosts = []
 
 def getPoliceShootings(): # json data from Washington Post.
 	with open('fatal-police-shootings-data.json', 'r') as policeKillings:
@@ -51,7 +52,7 @@ def honorTheDead(person):
 
 def getGoogleSearchService(): # Prepping Google Custom Search API
 	service = build("customsearch", "v1",
-			developerKey="")
+			developerKey="AIzaSyBhK5aNpy10sBLG0MMuiKuQk72tRW7n6kM")
 	return service
 
 def googleSearch(query): # Conduct google search of input parameter.
@@ -107,8 +108,10 @@ def Graveyard(folderName): # Main script structure. ie: Google search every name
 				print "%s: %s\n%s\nDeath: %s\n" % (name, x, person, gravePlotNumber)
 
 		except Exception as e: # Could not find search results for that inquiry.
-			print '%s is a ghost\n%s' % (name, e) 
-			break
+			#person["links"] = "%s is a ghost. Error: %s" % (name, e)
+			print '%s is a ghost\n%s' % (name, e)
+			ghosts.append("%s" % name)
+			continue
 
 		honorTheDead(person)
 		time.sleep(2) # Sleep between Google Searches, for development. Only 100/day allowed.
