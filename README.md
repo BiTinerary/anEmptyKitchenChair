@@ -8,8 +8,10 @@ Context sheds light on Truth. Without it, your perspective is in the dark. In ho
 
 I don't know if it was losing a childhood friend (Chester Bennington), a neighbor (Justine Damon) or constantly reminded of the fragility of Life by becoming a Father in the span of a month, or a combination of it all, but this project will keep me awake at night until it's finished.
 
-The repo's name was appropriately inspired by the first listening of this song, just a couple days ago.
+The repo's name was appropriately inspired by a line in this song, listened to for the first time just a couple days ago.
 https://www.youtube.com/watch?v=3kaUvGSLMew
+
+Victim, criminal, servant or otherwise. This is in dedication of everyone **affected** by the loss of every life represented by a headstone above.
 
 #### Next Update by 8.17.17
 
