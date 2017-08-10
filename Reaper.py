@@ -5,7 +5,7 @@ cemetery = {}
 ghosts = []
 
 def getPoliceShootings(): # json data from Washington Post.
-	with open('fatal-police-shootings-data.json', 'r') as policeKillings:
+	with open('the-counted-2015-2016Json.json', 'r') as policeKillings:
 		deaths = json.load(policeKillings)
 	return deaths
 
@@ -52,11 +52,7 @@ def honorTheDead(person):
 
 def getGoogleSearchService(): # Prepping Google Custom Search API
 	service = build("customsearch", "v1",
-<<<<<<< HEAD
-			developerKey="")
-=======
-			developerKey="AIzaSyBhK5aNpy10sBLG0MMuiKuQk72tRW7n6kM") # fake. Will not work.
->>>>>>> b3c8c710e437198c839aa4a9bc64f1a347f82b71
+					developerKey="AIzaSyDPnvXXnT1pvcZGfjSHEsziMoTovrI6eus")
 	return service
 
 def googleSearch(query): # Conduct google search of input parameter.
@@ -96,7 +92,7 @@ def googleSearch(query): # Conduct google search of input parameter.
 
 def Graveyard(folderName): # Main script structure. ie: Google search every name.
 	graveyard = getPoliceShootings()
-	createFolder(folderName)
+	#createFolder(folderName)
 	gravePlotNumber = 0
 
 	for person in graveyard: # For every person shot and killed.
@@ -106,18 +102,17 @@ def Graveyard(folderName): # Main script structure. ie: Google search every name
 			links, titles = googleSearch("%s Police shooting" % name) # syntactically confusing ' are peppered throughout base json.
 			gravePlotNumber += 1
 
-			# if person["Link0"] != True:
 			for x in range(3): # Append each of their search results into their original grave plot
 				person["link%s" % x] = links[x] # Each grave plot key is LinkX, value is url.
 				print "%s: %s\n%s\nDeath: %s\n" % (name, x, person, gravePlotNumber)
 
 		except Exception as e: # Could not find search results for that inquiry.
-			#person["links"] = "%s is a ghost. Error: %s" % (name, e)
 			print '%s is a ghost\n%s' % (name, e)
 			ghosts.append("%s" % name)
 			print ghosts
-			with open('Ghosts.txt', 'a+') as file:
+			with open('Ghosts.txt', 'w+') as file:
 				file.write(str(ghosts))
+			honorTheDead(person)
 
 		honorTheDead(person)
 		time.sleep(2) # Sleep between Google Searches, for development. Only 100/day allowed.
@@ -127,6 +122,3 @@ Graveyard("Headstones")
 #googleSearch('Lewis Lee Lembke')
 #createFilterFolder()
 #unarmedBlackMen(killings)
-#everyOtherUnarmedCitizens(killings)
-#everyName(killings)
-#everyName(killings)
