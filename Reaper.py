@@ -52,7 +52,11 @@ def honorTheDead(person):
 
 def getGoogleSearchService(): # Prepping Google Custom Search API
 	service = build("customsearch", "v1",
+<<<<<<< HEAD
 			developerKey="")
+=======
+			developerKey="AIzaSyBhK5aNpy10sBLG0MMuiKuQk72tRW7n6kM") # fake. Will not work.
+>>>>>>> b3c8c710e437198c839aa4a9bc64f1a347f82b71
 	return service
 
 def googleSearch(query): # Conduct google search of input parameter.
@@ -119,7 +123,7 @@ def Graveyard(folderName): # Main script structure. ie: Google search every name
 		time.sleep(2) # Sleep between Google Searches, for development. Only 100/day allowed.
 
 #killings = getPoliceShootings()
-Graveyard("Graveyard")
+Graveyard("Headstones")
 #googleSearch('Lewis Lee Lembke')
 #createFilterFolder()
 #unarmedBlackMen(killings)
