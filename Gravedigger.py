@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-import json, time, os
+import json, time, subprocess, os
 import youtube_dl
 """
 def getVideo(url, directory):
@@ -31,9 +31,13 @@ for person in getPoliceShootings():
 			x+=1
 
 			gravePlot = 'E:\\anEmptyKitchenChair\\Headstones\\%s' % name
+			print gravePlot
 			createFolder(gravePlot)
-			time.sleep(1)
-			os.system('cd %s' % gravePlot)
-			os.system('E:\\anEmptyKitchenChair\\Headstones\\youtube-dl.exe -o  %s\%s%s.mp4 %s.mp4' % (gravePlot, name, x, link))
+			#time.sleep(1)
+			os.system('cd "%s"' % gravePlot)
+			#print subprocess.call(['cd', '%s' % gravePlot], shell=False)
+			#subprocess.call('youtube-dl %s' % link)
+
+			os.system('E:\\anEmptyKitchenChair\\Headstones\\youtube-dl.exe -o "%s\%s - %s.mp4" %s' % (gravePlot, x, name, link))
 			#getVideo(link, gravePlot)
-			time.sleep(5)
+			time.sleep(1)
