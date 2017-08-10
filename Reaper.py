@@ -52,7 +52,7 @@ def honorTheDead(person):
 
 def getGoogleSearchService(): # Prepping Google Custom Search API
 	service = build("customsearch", "v1",
-			developerKey="AIzaSyBhK5aNpy10sBLG0MMuiKuQk72tRW7n6kM")
+			developerKey="AIzaSyBhK5aNpy10sBLG0MMuiKuQk72tRW7n6kM") # fake. Will not work.
 	return service
 
 def googleSearch(query): # Conduct google search of input parameter.
