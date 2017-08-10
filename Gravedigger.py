@@ -19,6 +19,14 @@ def createFolder(path): # Make folder, only if it doesn't exist.
 		os.makedirs(newPath)
 	return newPath
 
+def createNameDir(name):
+	gravePlot = 'E:\\anEmptyKitchenChair\\Headstones\\%s' % name
+	print gravePlot
+	createFolder(gravePlot)
+	#time.sleep(1)
+	os.system('cd "%s"' % gravePlot)
+	return gravePlot
+
 x = 0
 
 for person in getPoliceShootings():
@@ -26,18 +34,16 @@ for person in getPoliceShootings():
 	links = [person["link0"], person["link1"], person["link2"]]
 	#print name
 	for link in links:
+		gravePlot = createNameDir(name)
 		if "youtube" in link:
 			print "%s - %s: %s" % (x, name, link)
-			x+=1
-
-			gravePlot = 'E:\\anEmptyKitchenChair\\Headstones\\%s' % name
-			print gravePlot
-			createFolder(gravePlot)
-			#time.sleep(1)
-			os.system('cd "%s"' % gravePlot)
-			#print subprocess.call(['cd', '%s' % gravePlot], shell=False)
-			#subprocess.call('youtube-dl %s' % link)
-
+			#gravePlot = createNameDir(name)
 			os.system('E:\\anEmptyKitchenChair\\Headstones\\youtube-dl.exe -o "%s\%s - %s.mp4" %s' % (gravePlot, x, name, link))
 			#getVideo(link, gravePlot)
+			#time.sleep(1)
+		elif "youtube" not in link:
+			os.system('wget -P "%s" %s' % (gravePlot, link))
+			print x
 			time.sleep(1)
+
+		x += 1
