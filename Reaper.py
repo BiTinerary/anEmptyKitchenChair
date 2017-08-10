@@ -52,7 +52,7 @@ def honorTheDead(person):
 
 def getGoogleSearchService(): # Prepping Google Custom Search API
 	service = build("customsearch", "v1",
-			developerKey="AIzaSyBhK5aNpy10sBLG0MMuiKuQk72tRW7n6kM")
+			developerKey="")
 	return service
 
 def googleSearch(query): # Conduct google search of input parameter.
@@ -99,7 +99,7 @@ def Graveyard(folderName): # Main script structure. ie: Google search every name
 		name = person["name"]
 
 		try:
-			links, titles = googleSearch("%s Police shooting" % name.replace("'", "")) # syntactically confusing ' are peppered throughout base json.
+			links, titles = googleSearch("%s Police shooting" % name) # syntactically confusing ' are peppered throughout base json.
 			gravePlotNumber += 1
 
 			# if person["Link0"] != True:
@@ -111,7 +111,9 @@ def Graveyard(folderName): # Main script structure. ie: Google search every name
 			#person["links"] = "%s is a ghost. Error: %s" % (name, e)
 			print '%s is a ghost\n%s' % (name, e)
 			ghosts.append("%s" % name)
-			continue
+			print ghosts
+			with open('Ghosts.txt', 'a+') as file:
+				file.write(str(ghosts))
 
 		honorTheDead(person)
 		time.sleep(2) # Sleep between Google Searches, for development. Only 100/day allowed.
