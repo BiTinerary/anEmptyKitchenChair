@@ -117,7 +117,7 @@ def Graveyard(folderName): # Main script structure. ie: Google search every name
 		time.sleep(2) # Sleep between Google Searches, for development. Only 100/day allowed.
 
 #killings = getPoliceShootings()
-Graveyard("Graveyard")
+Graveyard("Headstones")
 #googleSearch('Lewis Lee Lembke')
 #createFilterFolder()
 #unarmedBlackMen(killings)
