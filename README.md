@@ -4,7 +4,7 @@
 Context sheds light on Truth. Without it, your perspective is in the dark. In honor of the unjustly departed.
 
 ### What?
-Use The Gaurdian's and Washington Posts databases of police involved deaths and shooting deaths, respectively, to download and organize 'eye witness' perspective provided by youtube video of body cams, dash cams and cell phone footage where available. Along with article .htmls, official police reports .pdfs and, etc...
+Use The Gaurdian's and Washington Posts databases of police involved deaths and shooting deaths, respectively, to download and organize 'eye witness' perspective which body cams, dash cams and cell phone footage provide. Along with news article .htmls, official police reports .pdfs and, etc...
 
 ### How
 Automate Google searches for each of the deceased names + "Police Shooting" and collect the top three results. Download each of these youtube videos/htmls/pdfs and store offline.
