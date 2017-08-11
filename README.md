@@ -3,6 +3,16 @@
 # anEmptyKitchenChair
 Context sheds light on Truth. Without it, your perspective is in the dark. In honor of the unjustly departed.
 
+### Why?
+
+Do I need more of a reason than an enlightened perspective and pursuance of accountability?
+
+At the end of the day, people are going to call 911, myself included. However, in light of the death of Justine Damond I find myself strongly questioning if I would in certain situations. Who would hesitate in what might be a dire moment? 2500+ officers say they wouldn't.
+
+**Everytime** someone rattles off names of individuals unjustly killed by police, there's always been **one** more name I didn't recognize. As result, I always felt the need to know who they were, to know their story. When I came across the Washington Posts [data-police-shootings](https://github.com/washingtonpost/data-police-shootings) repo I felt a little less, powerless. These are my efforts to make sense of it all.
+
+Victim, criminal, servant or otherwise. This is in dedication of everyone **affected** by the loss of life represented by each headstone above. You've kept me awake at night.
+
 ### What?
 Use The Gaurdian's and Washington Posts databases of police involved deaths and shooting deaths, respectively, to download and organize 'eye witness' perspective which body cams, dash cams and cell phone footage provide. Along with news article .htmls, official police reports .pdfs, etc...  
   
@@ -27,14 +37,6 @@ Automation/offline content allows for:
 * Updating cases as more content comes out and trials/lawsuits/prosecutions are finalized.
 * Automating parts of the manual process involved in updating databases with more info.
 * Prevention of dead links, unavailable content and potential censorship
-
-### Why?
-
-Do I need more of a reason than an enlightened perspective and pursuance of accountability?
-
-**Everytime** someone rattles off names of individuals unjustly killed by police, there's always been **one** more name I didn't recognize. As result, I always felt the need to know who they were, to know their story. When I came across the Washington Posts [data-police-shootings](https://github.com/washingtonpost/data-police-shootings) repo I felt a little less, powerless. These are my efforts to make sense of it all.
-
-Victim, criminal, servant or otherwise. This is in dedication of everyone **affected** by the loss of life represented by each headstone above. You've kept me awake at night.
 
 ### Inaccuracies
 Think about it, not all search results provide you with the exact content you're looking for. As such, some links are for unrelated material. For instance, common names + Police shootings might return a result for a different person (not killed by police) involved in a completely different set of circumstances. Additionally, if the case doesn't have an online presence, I've seen some links that go to a wikipedia page for someone completely irrelevant. Keep these facts in mind. This is why three results are returned and the innaccuracies are well worth the over all effectiveness of the project. More will be done later on to correct this information, manually.
