@@ -22,7 +22,7 @@ Automate Google searches for each of the deceased names + "Police Shooting" and 
 Automation/offline content allows for:
 * Updating cases as more content comes out and trials/lawsuits/prosecutions are finalized.
 * Automating parts of the manual process involved in updating databases with more info.
-* Prevent potential censorship
+* Prevent dead links, unavailable content or potential censorship
 
 ### Why?
 **Everytime** someone rattles off names of an individuals unjustly killed by police, there's always been **one** more name I didn't recognize. As result, I always felt the need to know who they were, to know their story. When I came across the Washington Posts [data-police-shootings](https://github.com/washingtonpost/data-police-shootings) repo I felt a little less, powerless. These are my efforts to make sense of it all.
