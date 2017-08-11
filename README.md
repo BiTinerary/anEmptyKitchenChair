@@ -24,9 +24,11 @@ Folder/file structure example:
 Automate Google searches for each of the deceased names + "Police Shooting" and collect the top three results. Download each of these youtube videos/htmls/pdfs and store offline.
 
 Automation/offline content allows for:
-* Updating cases as more content comes out and trials/lawsuits/prosecutions are finalized.
+* Updating dbase info as more content comes out and trials/lawsuits/prosecutions are finalized.
 * Automating parts of the manual process involved in updating databases with more info.
-* Prevention of dead links, unavailable content and potential censorship
+* Prevention of dead links, unavailable content and potential censorship.
+* Easier to navigate than clicking and searching for each piece of relevant data.
+* Machine Learning analysis?
 
 ### Why?
 
