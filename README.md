@@ -4,7 +4,7 @@
 Context sheds light on Truth. Without it, your perspective is in the dark. In honor of the unjustly departed.
 
 ### What?
-Use The Gaurdian's and Washington Posts databases of police involved deaths and shooting deaths, respectively, to download and organize 'eye witness' perspective which body cams, dash cams and cell phone footage provide. Along with news article .htmls, official police reports .pdfs and, etc...  
+Use The Gaurdian's and Washington Posts databases of police involved deaths and shooting deaths, respectively, to download and organize 'eye witness' perspective which body cams, dash cams and cell phone footage provide. Along with news article .htmls, official police reports .pdfs, etc...  
   
 Folder structure:
 * Tim Elliot
