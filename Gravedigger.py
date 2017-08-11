@@ -39,8 +39,6 @@ for person in getPoliceShootings():
 				#gravePlot = createNameDir(name)
 				os.system('F:\\anEmptyKitchenChair\\Headstones\\youtube-dl.exe --restrict-filenames -o "%s\%%(title)s.%%(ext)s" %s' % (gravePlot, link))
 				time.sleep(5)
-				#getVideo(link, gravePlot)
-				#time.sleep(1)
 			
 			else:
 				if "fatal-police-shootings-data.csv" in link: # don't download csv from which name was originally received.
