@@ -1,5 +1,8 @@
 import json, time, os, re
 
+duplicateNames = []
+x = 0
+
 def getPoliceShootings(): # json data from Washington Post.
 	with open('fatal-police-shootings-data-with-linksJSON.json', 'r') as policeKillings:
 		deaths = json.load(policeKillings)
@@ -9,6 +12,8 @@ def createFolder(path): # Make folder, only if it doesn't exist.
 	newPath = str(path)
 	if not os.path.exists(newPath):
 		os.makedirs(newPath)
+	else: # if exists, duplicate name
+		duplicateNames.append(path)
 	return newPath
 
 def createNameDir(name):
@@ -19,7 +24,6 @@ def createNameDir(name):
 	os.system('cd "%s"' % gravePlot)
 	return gravePlot
 
-x = 0
 
 for person in getPoliceShootings():
 	name = person["name"]
@@ -30,9 +34,10 @@ for person in getPoliceShootings():
 		gravePlot = createNameDir(name)
 		try:
 			if "youtube" in link:
+				print "###################### YOUTUBE #####################"
 				print "%s - %s: %s" % (x, name, link)
 				#gravePlot = createNameDir(name)
-				os.system('F:\\anEmptyKitchenChair\\Headstones\\youtube-dl.exe -o "%s\%s - %s.mp4" %s' % (gravePlot, x, name, link))
+				os.system('F:\\anEmptyKitchenChair\\Headstones\\youtube-dl.exe --restrict-filenames -o "%s\%%(title)s.%%(ext)s" %s' % (gravePlot, link))
 				time.sleep(5)
 				#getVideo(link, gravePlot)
 				#time.sleep(1)
@@ -43,11 +48,15 @@ for person in getPoliceShootings():
 					pass
 
 				else: # "youtube" not in link: wget it
-					os.system('wget -P "%s" %s' % (gravePlot, link)) #-nc
+					os.system('wget -nc -P "%s" %s' % (gravePlot, link)) #-nc
 					print x
 
 		except Exception as e:
 			print "Error with filename?"
 			print e
+			time.sleep(30)
 			pass
-		x += 1
+	x += 1
+
+with open('DuplicateNames.txt', 'w+') as dupes:
+	dupes.write(str(duplicateNames))
