@@ -1,13 +1,5 @@
-from __future__ import unicode_literals
+import json, time, os, re
 
-import json, time, subprocess, os
-import youtube_dl
-"""
-def getVideo(url, directory):
-	ydl_opts = {'outtmpl' : directory}
-	with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-	    ydl.download(['%s' % url])
-"""
 def getPoliceShootings(): # json data from Washington Post.
 	with open('fatal-police-shootings-data-with-linksJSON.json', 'r') as policeKillings:
 		deaths = json.load(policeKillings)
@@ -20,7 +12,7 @@ def createFolder(path): # Make folder, only if it doesn't exist.
 	return newPath
 
 def createNameDir(name):
-	gravePlot = 'E:\\anEmptyKitchenChair\\Headstones\\%s' % name
+	gravePlot = 'F:\\anEmptyKitchenChair\\Headstones\\%s' % name
 	print gravePlot
 	createFolder(gravePlot)
 	#time.sleep(1)
@@ -31,19 +23,31 @@ x = 0
 
 for person in getPoliceShootings():
 	name = person["name"]
+	name = re.sub(r'([^\s\w]|_)+', '', name) # Regex for filename. Only alphanumerics + spaces allowed.
 	links = [person["link0"], person["link1"], person["link2"]]
 	#print name
 	for link in links:
 		gravePlot = createNameDir(name)
-		if "youtube" in link:
-			print "%s - %s: %s" % (x, name, link)
-			#gravePlot = createNameDir(name)
-			os.system('E:\\anEmptyKitchenChair\\Headstones\\youtube-dl.exe -o "%s\%s - %s.mp4" %s' % (gravePlot, x, name, link))
-			#getVideo(link, gravePlot)
-			#time.sleep(1)
-		elif "youtube" not in link:
-			os.system('wget -P "%s" %s' % (gravePlot, link))
-			print x
-			time.sleep(1)
+		try:
+			if "youtube" in link:
+				print "%s - %s: %s" % (x, name, link)
+				#gravePlot = createNameDir(name)
+				os.system('F:\\anEmptyKitchenChair\\Headstones\\youtube-dl.exe -o "%s\%s - %s.mp4" %s' % (gravePlot, x, name, link))
+				time.sleep(5)
+				#getVideo(link, gravePlot)
+				#time.sleep(1)
+			
+			else:
+				if "fatal-police-shootings-data.csv" in link: # don't download csv from which name was originally received.
+					print link
+					pass
 
+				else: # "youtube" not in link: wget it
+					os.system('wget -P "%s" %s' % (gravePlot, link)) #-nc
+					print x
+
+		except Exception as e:
+			print "Error with filename?"
+			print e
+			pass
 		x += 1
