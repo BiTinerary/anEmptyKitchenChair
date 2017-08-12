@@ -10,7 +10,7 @@ Folder/file structure example:
 <img src='https://github.com/BiTinerary/anEmptyKitchenChair/blob/master/Graveyard/treeExample.png?raw=true'>
 
 ### How?
-Automate Google searches for each of the deceased names + "Police Shooting" and collect the top three results. Download each of these youtube videos/htmls/pdfs and store offline.
+Automate Google searches for each of the deceased names + "Police Shooting" and collect the top three results. Download each of these youtube videos/htmls/pdfs and store offline. Note that API results do vary from manual search results.
 
 Automation/offline content allows for:
 * Updating dbase info as more content comes out and trials/lawsuits/prosecutions are finalized.
