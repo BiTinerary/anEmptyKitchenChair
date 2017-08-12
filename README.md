@@ -10,14 +10,14 @@ Folder/file structure example:
 <img src='https://github.com/BiTinerary/anEmptyKitchenChair/blob/master/Graveyard/treeExample.png?raw=true'>
 
 ### How?
-Automate Google searches for each of the deceased names + "Police Shooting" and collect the top three results. Download each of these youtube videos/htmls/pdfs and store offline. Note that API results do vary from manual search results.
+Automate Google searches for each of the deceased names + "Police Shooting" and collect the top three results. If a link is to youtube, download the video. Else, download the html/pdfs file. Note that API results do vary from manual search results.
 
 Automation/offline content allows for:
 * Updating dbase info as more content comes out and trials/lawsuits/prosecutions are finalized.
 * Automating parts of the manual process involved in updating databases with more info.
 * Prevention of dead links, unavailable content and potential censorship.
 * Easier to navigate than clicking and searching for each piece of relevant data.
-* Machine Learning analysis?
+* Machine Learning analysis? ie: Officer aquitted or charged?
 
 ### Why?
 
