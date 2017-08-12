@@ -21,9 +21,8 @@ Automation/offline content allows for:
 
 ### Why?
 
-**Everytime** someone rattles off names of individuals unjustly killed by police, there's always been **one** more name I didn't recognize. As result, I always felt the need to know who they were, to know their story. When I came across the Washington Posts [data-police-shootings](https://github.com/washingtonpost/data-police-shootings) repo I felt a little less, powerless. These are my efforts to make sense of it all.
-
 Do I need more of a reason than an enlightened perspective and pursuance of accountability?
+This **o**bsession t**o** **o**bserve **a**n **o**bjectively **o**bvious **o**ppression **o**f **l**ife **a**nd **l**iberty **l**eaves **o**nly **l**amenting **o**utrage.
 
 Victim, criminal, servant or otherwise. This is in dedication of everyone **affected** by the loss of life represented by each headstone above. You've kept me awake at night.
 
