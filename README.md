@@ -14,7 +14,7 @@ Automate Google searches for each of the deceased names + "Police Shooting" and 
 
 **Reaper.py** == for each name in json, do google search + "police shooting". Gather first 3 results. Add links to json.  
 **Gravedigger.py** == youtube-dl/wget the aquired links/urls and store them offline in a file of the deceased.  
-**Ghosts.py** == Some google searches didn't return results or errored out for various reasons.  
+**Ghosts.py** == Some google searches didn't return results or errored out for various reasons. Make sure they are counted.  
 
 Automation/offline content allows for:
 * Updating dbase info as more content comes out and trials/lawsuits/prosecutions are finalized.
