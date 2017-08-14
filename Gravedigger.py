@@ -1,6 +1,6 @@
 import json, time, os, re
 
-duplicateNames = []
+#duplicateNames = []
 x = 0
 
 def getPoliceShootings(): # json data from Washington Post.
@@ -12,15 +12,14 @@ def createFolder(path): # Make folder, only if it doesn't exist.
 	newPath = str(path)
 	if not os.path.exists(newPath):
 		os.makedirs(newPath)
-	else: # if exists, duplicate name
-		duplicateNames.append(path)
+#	else: # if exists, duplicate name
+#		duplicateNames.append(path)
 	return newPath
 
 def createNameDir(name):
 	gravePlot = 'F:\\anEmptyKitchenChair\\Headstones\\%s' % name
 	print gravePlot
 	createFolder(gravePlot)
-	#time.sleep(1)
 	os.system('cd "%s"' % gravePlot)
 	return gravePlot
 
@@ -52,9 +51,9 @@ for person in getPoliceShootings():
 		except Exception as e:
 			print "Error with filename?"
 			print e
-			time.sleep(30)
+			time.sleep(30) # For visual acknowledgement.
 			pass
 	x += 1
 
-with open('DuplicateNames.txt', 'w+') as dupes:
-	dupes.write(str(duplicateNames))
+#with open('DuplicateNames.txt', 'w+') as dupes:
+#	dupes.write(str(duplicateNames))
