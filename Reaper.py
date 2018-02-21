@@ -52,7 +52,7 @@ def honorTheDead(person):
 
 def getGoogleSearchService(): # Prepping Google Custom Search API
 	service = build("customsearch", "v1",
-					developerKey="AIzaSyDPnvXXnT1pvcZGfjSHEsziMoTovrI6eus")
+					developerKey="AIzaSyDPnvXXnT1pvcZGfjSHEsziMoTovrI6eus") #Not a real Key
 	return service
 
 def googleSearch(query): # Conduct google search of input parameter.
@@ -66,7 +66,7 @@ def googleSearch(query): # Conduct google search of input parameter.
 
 		response.append(service.cse().list(
 			q=query, #Search words
-			cx='001132580745589424302:jbscnf14_dw',  #CSE Key
+			cx='001132580745589424302:jbscnf14_dw',  #Not a real CSE Key
 			lr='lang_en', #Search language
 			start=startIndex
 		).execute())
